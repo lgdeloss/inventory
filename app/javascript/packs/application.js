@@ -13,6 +13,5 @@ Turbolinks.start()
 ActiveStorage.start()
 
 import "bootstrap"
-import "../stylesheets/application"
 
 var jQuery = require('jquery')

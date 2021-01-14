@@ -9,6 +9,10 @@ class UsersController < ApplicationController
         @user = User.new
     end
 
+    def index
+        @users = User.all
+    end
+
     def edit
         @user = User.find(params[:id])
     end
@@ -31,6 +35,11 @@ class UsersController < ApplicationController
         else
             render 'new'
         end
+    end
+
+    def destroy
+        @user.destroy
+        redirect_to users_path
     end
 
     private
